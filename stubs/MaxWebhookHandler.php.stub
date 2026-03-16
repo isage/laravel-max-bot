@@ -1,0 +1,31 @@
+<?php
+
+namespace {{ namespace }};
+
+use Blacky0892\Max\Contracts\HandlesMaxUpdates;
+use Blacky0892\Max\Facades\Max;
+use Blacky0892\Max\Support\Update;
+
+class {{ class }} implements HandlesMaxUpdates
+{
+    public function handle(Update $update): void
+    {
+        if ($update->isMessageCreated()) {
+            $text = trim((string) $update->text());
+
+            if ($text === '/start' && $update->userId()) {
+                Max::client()->sendMessageToUser(
+                    userId: $update->userId(),
+                    text: 'Привет! Бот на связи.'
+                );
+            }
+        }
+
+        if ($update->isMessageCallback() && $update->callbackId()) {
+            Max::callbacks()->answer(
+                callbackId: $update->callbackId(),
+                notification: 'Нажатие обработано'
+            );
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/vendor
+/.idea
+/.vscode
+/.phpunit.cache
+/.php-cs-fixer.cache
+/.pest.cache
+/.coverage
+/build
+/coverage
+composer.lock
+.DS_Store
+Thumbs.db
+.env
+.env.*
+phpunit.xml
+auth.json
