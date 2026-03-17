@@ -369,10 +369,20 @@ $update->isMessageCallback();
 
 ---
 
-
-
 ## Лицензия
 
 MIT
 
+---
+
+## Автор
+
+Blacky0892 <anton@anton-mironov.ru>
+
+---
+
+## Ссылки
+
+- [MAX Messenger](https://max.ru/)
+- [MAX Bot API Documentation](https://platform-api.max.ru/docs/)
 
